@@ -11,7 +11,7 @@ let photos = ["https://preview.redd.it/if-the-show-is-successful-what-would-be-g
 
 // 1. Push an image link of one of your favorite shows to the photos array.
 //  - To find the link, right-click an image and choose 'Copy Image Address'
-
+photos.push("https://www.google.com/logos/google.jpg");
 
 
 // HTML selectors
@@ -22,6 +22,10 @@ let show4 = document.querySelector(".show-4");
 let show5 = document.querySelector(".show-5");
 let show6 = document.querySelector(".show-6");
 
-
-show1.src = photos[0];
+let showArray = [
+    show1,show2,show3,show4,show5,show6
+];
 // 2. Update the src for each show# variable - use the line above as a reference.
+showArray.forEach(function(element,index){
+    element.src = photos[index];
+});
